@@ -1,0 +1,19 @@
+{
+  "name": "Getting Started Example",
+  "description": "Build an Extension!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "awesome/background.js"
+  },
+  "action": {
+    "default_popup": "ext/index.html"
+  },
+  "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+  ],
+  "permissions": ["storage","activeTab","declarativeContent"]
+}
